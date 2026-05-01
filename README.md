@@ -1,123 +1,75 @@
-# 🔐 Firebase Auth App
+# 🔐 Firebase Authentication System
 
-A simple and modern authentication app built with **React (Vite)** and **Firebase Authentication**.
-This project demonstrates how to integrate Google Sign-In and manage user sessions in a clean and practical way.
+A secure and user-friendly authentication system built with **React (Vite)** and **Firebase Authentication**.
+This application allows users to register, log in, and manage authentication securely using both email/password and Google Sign-In.
 
 ---
 
 ## 🚀 Features
 
-* 🔑 Sign in with Google (Firebase Authentication)
-* 🔄 Real-time auth state handling
-* 👤 User profile display (name & avatar)
-* 🚪 Secure logout functionality
-* ⚡ Fast development with Vite
-* 🧩 Clean and scalable component structure
+* 🔑 User Registration (Email & Password)
+* 🔐 User Login (Email/Password + Google Sign-In)
+* 🔄 Real-Time Authentication State Handling
+* 🔁 Forgot Password (Email Reset)
+* 🚪 Secure Logout
+* 🔒 Protected Routes (Dashboard access control)
+* ⚡ Fast and responsive UI with Vite
 
 ---
 
-## 🛠️ Tech Stack
+## 📚 Use Case
 
-* React (Vite)
-* Firebase Authentication
-* Firebase Realtime Database (optional)
-* JavaScript (ES6+)
-* CSS
+This system can be integrated into any web application or SaaS platform to handle user authentication, manage sessions, and restrict access to protected content securely.
+
+---
+
+## 🛠 Tech Stack
+
+* **Frontend:** React.js (Vite)
+* **Authentication:** Firebase Authentication
+* **Middleware:** Firebase SDK
+* **Styling:** CSS
+* **Routing:** React Router DOM
 
 ---
 
 ## 📂 Project Structure
 
-```
+```id="p3azqj"
 src/
  ├── components/
  │    ├── Navbar.jsx
  │    ├── Login.jsx
+ │    ├── Signup.jsx
+ │    ├── ForgotPassword.jsx
  │    ├── Dashboard.jsx
  │
  ├── firebase.js
  ├── App.jsx
  ├── main.jsx
  ├── App.css
- ├── index.css
-```
-
----
-
-## ⚙️ Getting Started
-
-### 1. Create Project
-
-```
-npm create vite@latest firebase-auth-app
-cd firebase-auth-app
-npm install
-npm install firebase
-```
-
----
-
-### 2. Firebase Setup
-
-* Go to Firebase Console
-* Create a project
-* Enable **Google Authentication**
-* Register a **Web App**
-* Copy your Firebase config
-
----
-
-### 3. Configure Firebase
-
-Update `firebase.js`:
-
-```
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "YOUR_DATABASE_URL",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_ID",
-  appId: "YOUR_APP_ID"
-};
-```
-
----
-
-### 4. Run the App
-
-```
-npm run dev
-```
-
-App will run on:
-
-```
-http://localhost:5173/
 ```
 
 ---
 
 ## 🔐 Authentication Flow
 
-1. User clicks **Sign in with Google**
-2. Firebase opens a secure popup
-3. User selects account
-4. App receives user data
-5. UI updates instantly
+1. User registers using email/password
+2. User logs in via email/password or Google
+3. Firebase manages session persistence
+4. Protected routes restrict unauthorized access
+5. Users can reset password via email
 
 ---
 
-## 📸 Screens
+## 📌 Conclusion
 
-* Login Screen
-* Dashboard with user info
-* Logout state
-   
-  <img width="1351" height="339" alt="localhost_5173_ (3)" src="https://github.com/user-attachments/assets/4cc5ef56-e447-40df-b557-cab51a0eab13" />
+The Firebase Authentication System successfully implements a secure and reliable authentication workflow using React and Firebase. It includes key features such as user registration, login with multiple methods, password recovery, protected routes, and real-time authentication state management. The project demonstrates adherence to modern development standards, clean architecture, and effective integration of third-party services. Overall, it serves as a solid and scalable foundation for building secure, user-centric web applications with robust access control.
+<img width="1351" height="313" alt="localhost_5173_ (6)" src="https://github.com/user-attachments/assets/70a9b69c-8daf-413f-a796-04f8744c5d08" />
+<img width="1366" height="303" alt="localhost_5173_ (10)" src="https://github.com/user-attachments/assets/2e8e5051-20ec-48a1-b79e-310e9d2967c9" />
+<img width="1366" height="303" alt="localhost_5173_ (7)" src="https://github.com/user-attachments/assets/65832aee-d7ab-48fb-b71b-27fe9bddeb81" />
+<img width="1366" height="303" alt="localhost_5173_ (8)" src="https://github.com/user-attachments/assets/5bd9da35-26be-4218-8c93-038f92f9874a" />
+<img width="1366" height="303" alt="localhost_5173_ (9)" src="https://github.com/user-attachments/assets/f2507d10-bb17-4bb6-a724-a245b906e230" />
 
 
-   <img width="1351" height="369" alt="localhost_5173_ (4)" src="https://github.com/user-attachments/assets/e73811b0-3d43-4b53-b767-81bbb236b748" />
 
----
